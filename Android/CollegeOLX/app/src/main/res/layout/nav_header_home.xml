@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/side_nav_bar"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:background="@color/red">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headerImageView"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/user"
+            android:layout_gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/headerUsernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textSize="18dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/headerEmailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Login for Better Experience"
+                android:layout_marginTop="8dp"
+                android:textSize="14dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/headerProfileSettings"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_settings"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

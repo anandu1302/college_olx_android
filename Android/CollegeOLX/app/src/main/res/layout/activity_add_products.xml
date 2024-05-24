@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddProductsActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/productNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:background="@drawable/card_background" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Desc"
+                android:textSize="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/productDescEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:minLines="5"
+                android:padding="8dp"
+                android:background="@drawable/card_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/productPriceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:inputType="number"
+                android:background="@drawable/card_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:textSize="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/addProductImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/upload" />
+
+            <Button
+                android:id="@+id/addProductButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_button"
+                android:layout_marginTop="10dp"
+                android:text="Add Product" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light"
+    android:padding="12dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_my_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingLeft="5dp"
+        app:contentPaddingRight="5dp"
+        app:contentPaddingTop="5dp"
+        app:contentPaddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mDeleteProductImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/delete"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="end"/>
+
+            <ImageView
+                android:id="@+id/mProductImageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"/>
+
+            <TextView
+                android:id="@+id/mProductNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pname"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/mProductDescTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="desc"
+                android:lines="2"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/mProductPriceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

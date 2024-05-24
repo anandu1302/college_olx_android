@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".CartActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cartRecyclerView" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="80sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/white_light_rect"
+                android:layout_marginLeft="8.5dp"
+                android:layout_marginRight="8.5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Summary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/text_black"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:textSize="12.7sp"
+                        android:textColor="#a2a2a2"
+                        android:fontFamily="@font/roboto_regular"/>
+
+
+                    <TextView
+                        android:id="@+id/cartSubTotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="12.7sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="₹ 00.00"/>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f2f2f2"
+                    android:layout_marginLeft="8.5dp"
+                    android:layout_marginRight="8.5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping Charge"
+                        android:textSize="12.7sp"
+                        android:textColor="#a2a2a2"
+                        android:fontFamily="@font/roboto_regular"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#32CD32"
+                        android:textSize="12.7sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Free"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f2f2f2"
+                    android:layout_marginLeft="8.5dp"
+                    android:layout_marginRight="8.5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Coupan Discount"
+                        android:textSize="12.7sp"
+                        android:textColor="#a2a2a2"
+                        android:fontFamily="@font/roboto_regular"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#32CD32"
+                        android:textSize="12.7dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Apply Coupan"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f2f2f2"
+                    android:layout_marginLeft="8.5dp"
+                    android:layout_marginRight="8.5dp"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="12.7dp"
+                        android:textColor="#a2a2a2"
+                        android:fontFamily="@font/roboto_regular"/>
+
+
+                    <TextView
+                        android:id="@+id/cartTotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="12.7dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="₹ 00.00"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/cartCheckoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:textSize="15dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
